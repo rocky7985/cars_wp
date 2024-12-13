@@ -9,7 +9,7 @@ require ABSPATH . WPINC . '/option.php';
 
 function add_cors_http_header() {
     // Allow all domains (use specific domain for more security)
-    header("Access-Control-Allow-Origin: *"); 
+    header("Access-Control-Allow-Origin: https://brewery-beta.vercel.app"); 
     header("Access-Control-Allow-Methods: GET, POST, OPTIONS"); // Allow GET, POST, OPTIONS methods
     header("Access-Control-Allow-Headers: Content-Type, Authorization"); // Allow specific headers
     
