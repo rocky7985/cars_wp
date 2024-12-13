@@ -51,6 +51,13 @@ function mysql2date( $format, $date, $translate = true ) {
 	return $datetime->format( $format );
 }
 
+function add_cors_http_header() {
+    header("Access-Control-Allow-Origin: *"); // Allow all domains, replace '*' with your frontend URL for more security (e.g., "https://brewery-beta.vercel.app")
+    header("Access-Control-Allow-Methods: GET, POST, OPTIONS"); // Allow specific methods (e.g., GET, POST)
+    header("Access-Control-Allow-Headers: Content-Type, Authorization"); // Allow specific headers
+}
+add_action('init', 'add_cors_http_header');
+
 /**
  * Retrieves the current time based on specified type.
  *
